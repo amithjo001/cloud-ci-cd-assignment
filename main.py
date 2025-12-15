@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-history = []
 
 @app.route("/", methods=["GET", "POST"])
 def calculator():
     result = None
+    history = []   # ✅ local history (resets every request)
 
     if request.method == "POST":
         try:
