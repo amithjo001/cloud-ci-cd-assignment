@@ -4,6 +4,7 @@ steps:
       - 'app'
       - 'deploy'
       - '--quiet'
+      - '--no-promote'
 
 options:
   logging: CLOUD_LOGGING_ONLY
