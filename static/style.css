@@ -36,3 +36,92 @@ button {
     color: green;
     font-weight: bold;
 }
+
+
+/* Mobile Responsiveness */
+
+/* Base reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Container */
+.calculator-container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Inputs */
+.calculator-container input,
+.calculator-container select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.calculator-container button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Result box */
+.result-box {
+  margin-top: 15px;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* History */
+.history {
+  margin-top: 20px;
+}
+
+.history ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.history li {
+  padding: 8px 10px;
+  font-size: 14px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+}
+
+/* ---------- Mobile Optimisation ---------- */
+@media (max-width: 600px) {
+  .calculator-container {
+    width: 95%;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  h1, h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .calculator-container input,
+  .calculator-container select,
+  .calculator-container button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .history li {
+    font-size: 13px;
+  }
+}
+
+/* ---------- Tablet ---------- */
+@media (min-width: 601px) and (max-width: 900px) {
+  .calculator-container {
+    max-width: 500px;
+  }
+}
