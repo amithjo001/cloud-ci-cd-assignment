@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Python Calculator</h1>
+
+    <form method="POST">
+        <input type="number" name="num1" required step="any">
+        <select name="operation">
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="mul">*</option>
+            <option value="div">/</option>
+        </select>
+        <input type="number" name="num2" required step="any">
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result is not none %}
+        <p class="result">Result: {{ result }}</p>
+    {% endif %}
+
+    <h3>History</h3>
+    <ul>
+        {% for item in history %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
